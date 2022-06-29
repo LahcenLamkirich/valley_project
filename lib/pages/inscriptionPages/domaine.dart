@@ -152,7 +152,7 @@ class _DomaineState extends State<Domaine> {
         password: widget.password
     ).catchError((onError){
       Navigator.pop(context);
-    })).user ;
+    })).user;
 
     // Now the user is created Successfully :
     if(firebaseUser != null) {

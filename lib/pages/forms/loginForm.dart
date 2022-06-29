@@ -135,10 +135,7 @@ class MyCustomFormState extends State<MyCustomForm> {
     signInWithEmailAndPassword(
         email: emailController.text,
         password: mdpController.text
-    ).catchError((err) {
-      Navigator.pop(context);
-      showToastMessage(context, "The Error " + err.toString());
-    })).user;
+    )).user;
 
     print("After Firebase User");
 

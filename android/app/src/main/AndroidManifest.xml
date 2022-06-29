@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.co_founders_valley">
+    package="com.example.valleyproject">
    <application
         android:label="valleyproject"
         android:name="${applicationName}"
