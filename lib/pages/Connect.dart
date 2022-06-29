@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'forms/loginForm.dart';
 
@@ -8,8 +9,12 @@ class Connect extends StatefulWidget {
 }
 
 class _ConnectState extends State<Connect> {
+
+  CollectionReference universitiesReference = FirebaseFirestore.instance.collection("universities");
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: Center(
         child: Column(
@@ -23,6 +28,13 @@ class _ConnectState extends State<Connect> {
             ),
             const MyCustomForm(),
             TextButton(onPressed: (){
+              //
+              // Map<String, dynamic> dataHere = {
+              //   "id": 21,
+              //   "name": "Université Privée Mundiapolis- Casablanca"
+              // };
+              //
+              // universitiesReference.add(dataHere);
               Navigator.pushNamed(context, '/pagesExplicatifs/expliquer1.dart');
             },
                 style: TextButton.styleFrom(

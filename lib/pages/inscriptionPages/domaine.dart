@@ -24,6 +24,7 @@ class _DomaineState extends State<Domaine> {
 
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance ;
   CollectionReference usersReference = FirebaseFirestore.instance.collection("users");
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -119,7 +120,8 @@ class _DomaineState extends State<Domaine> {
                           onPressed: () {
                             if(valueChoose!=''){
                               // here i have to add the traitement :
-                              saveNewUser(context);
+                              // saveNewUser(context);
+
 
                               Navigator.push(
                                 context,
