@@ -1,5 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:valleyproject/main.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
@@ -22,8 +20,6 @@ class Domaine extends StatefulWidget {
 class _DomaineState extends State<Domaine> {
   String valueChoose='';
 
-  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance ;
-  CollectionReference usersReference = FirebaseFirestore.instance.collection("users");
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +35,7 @@ class _DomaineState extends State<Domaine> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
 
-                    Center(
+                    const Center(
                       child: Text('Sélectionner votre domaine de spécialité!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
                     ),
 
@@ -119,10 +115,6 @@ class _DomaineState extends State<Domaine> {
                           ),
                           onPressed: () {
                             if(valueChoose!=''){
-                              // here i have to add the traitement :
-                              // saveNewUser(context);
-
-
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(builder: (context) => SocialMedia(nom: widget.nom, email: widget.email, password: widget.password, phone: widget.phone, date: widget.date, genre: widget.genre, univ: widget.univ, school: widget.school, branche: widget.branche, niveau: widget.niveau, etud_laureat: widget.etud_laureat,passions: widget.passions,counter: widget.counter, sdgs: widget.sdgs, sdgs_counter: widget.sdgs_counter,description: widget.description, file: widget.file, valueChoose: valueChoose)),
@@ -145,65 +137,6 @@ class _DomaineState extends State<Domaine> {
 
     );
   }
-
-  // la declaration de la fonction :
-  saveNewUser(BuildContext context) async {
-
-    User? firebaseUser = (await _firebaseAuth.createUserWithEmailAndPassword(
-        email: widget.email,
-        password: widget.password
-    ).catchError((onError){
-      Navigator.pop(context);
-    })).user;
-
-    // Now the user is created Successfully :
-    if(firebaseUser != null) {
-
-      print("the email is : " + widget.email) ;
-      print("the password is : " + widget.password);
-
-      usersReference.doc(firebaseUser.uid).set({
-        "nom" : widget.nom,
-        "phone": widget.phone,
-        "date": widget.date,
-        "genre": widget.genre,
-        "univ": widget.univ,
-        "school": widget.school,
-        "branche": widget.branche,
-        "niveau": widget.niveau,
-        "etud_laureat": widget.etud_laureat,
-        "passions": widget.passions,
-        "counter": widget.counter,
-        "sdgs": widget.sdgs,
-        "sdgs_counter": widget.sdgs_counter,
-        "description": widget.description,
-        "file": widget.file,
-        "valueChoose": valueChoose
-      });
-
-      // userReference.child(firebaseUser.uid).set({
-      //   "nom" : widget.nom,
-      //   "phone": widget.phone,
-      //   "date": widget.date,
-      //   "genre": widget.genre,
-      //   "univ": widget.univ,
-      //   "school": widget.school,
-      //   "branche": widget.branche,
-      //   "niveau": widget.niveau,
-      //   "etud_laureat": widget.etud_laureat,
-      //   "passions": widget.passions,
-      //   "counter": widget.counter,
-      //   "sdgs": widget.sdgs,
-      //   "sdgs_counter": widget.sdgs_counter,
-      //   "description": widget.description,
-      //   "file": widget.file,
-      //   "valueChoose": valueChoose
-      // });
-      print("User Added Successfully !");
-    }
-  }
-
-
 
 
 }
