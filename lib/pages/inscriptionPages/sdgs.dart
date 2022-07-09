@@ -39,11 +39,15 @@ class _SdgsState extends State<Sdgs> {
                 padding: const EdgeInsets.all(30.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text('Sélectionner les objectifs de développement', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                  children: const <Widget>[
+                    Text('Sélectionner les objectifs de développement', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text('durable qui vous intéressent plus', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                      padding: EdgeInsets.all(8.0),
+                      child: Text('durable qui vous intéressent plus', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 8),
+                      child: Text('Choisir entre 1 et 3 SDGs!', style: TextStyle(fontSize: 16)),
                     ),
                   ],
                 ),

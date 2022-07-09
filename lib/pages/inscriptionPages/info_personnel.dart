@@ -31,7 +31,7 @@ class _NewUserInfoState extends State<NewUserInfo> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(top:70),
+          padding: const EdgeInsets.only(top:40),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -137,7 +137,7 @@ class _NewUserInfoState extends State<NewUserInfo> {
 
 
 
-              SizedBox(height: 100),
+              SizedBox(height: 70),
               ElevatedButton(
                 child: Text("Continuer", style: TextStyle(fontSize: 18)),
                 style: ElevatedButton.styleFrom(

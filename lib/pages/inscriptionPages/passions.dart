@@ -35,20 +35,24 @@ class _PassionsState extends State<Passions> {
           child: Column(
             children: <Widget>[
 
-              Padding(
-                padding: const EdgeInsets.only(top: 50),
-                child: Text('Passions ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+              const Padding(
+                padding: EdgeInsets.only(top: 30),
+                child: Text('Passions', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(top: 10),
+                  child: Text('Choisir entre 1 et 3 passions!', style: TextStyle(fontSize: 18)),
               ),
 
               Padding(
-                padding: const EdgeInsets.fromLTRB(20, 60, 20, 10),
+                padding: const EdgeInsets.fromLTRB(20, 38, 20, 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ElevatedButton(
-                        child: Text("Apprentissage", style: TextStyle(color:  Color(0xffFF2F2F2F))),
+                        child: Text("Apprentissage", style: const TextStyle(color:  Color(0xffFF2F2F2F))),
                         style: ElevatedButton.styleFrom(
                           primary: passionColor("Apprentissage"),
                           padding: EdgeInsets.fromLTRB(23, 14, 25, 12),
@@ -381,7 +385,7 @@ class _PassionsState extends State<Passions> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 70, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                 child: ElevatedButton(
                   child: Text("Continuer", style: TextStyle(fontSize: 18),),
                   style: ElevatedButton.styleFrom(

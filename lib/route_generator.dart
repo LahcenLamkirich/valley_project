@@ -1,8 +1,7 @@
-import 'package:valleyproject/pages/session/ChooseService.dart';
-import 'package:valleyproject/pages/session/Idea_holder/MenuPage.dart';
+import 'package:valleyproject/pages/session/Idea_holder/HomePage.dart';
 import 'package:valleyproject/pages/session/Idea_holder/Share_project.dart';
-import 'package:valleyproject/pages/session/SkilledPerson/MainPage.dart';
 import 'package:flutter/material.dart';
+import 'package:valleyproject/pages/session/SkilledPerson/HomePage.dart';
 import 'pages/Home.dart';
 import 'pages/Connect.dart';
 import 'pages/pagesExplicatifs/expliquer1.dart';
@@ -32,14 +31,12 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => Interface4());
       case '/pages/inscriptionPages/compte.dart':
         return MaterialPageRoute(builder: (_) => NewUser());
-      case '/chooseService':
-      return MaterialPageRoute(builder: (_) => ChooseService());
       case '/shareproject':
         return MaterialPageRoute(builder: (_) => Share_project());
-      case '/menuPage':
-        return MaterialPageRoute(builder: (_) => MenuPage());
       case '/MainPageTalent':
-        return MaterialPageRoute(builder: (_) => MainPage());
+        return MaterialPageRoute(builder: (_) => HomePageSkill(openDrawer: () {}));
+      case '/IdeaHolder_HomePage':
+        return MaterialPageRoute(builder: (_) => HomePage(openDrawer: () {},));
       // Validation of correct data type
       //   if (args is Utilisateur) {
       //     return MaterialPageRoute(

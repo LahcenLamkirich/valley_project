@@ -53,8 +53,8 @@ class _SocialMediaState extends State<SocialMedia> {
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Text('Copier les liens de vos réseaux sociaux !',
                         style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
@@ -62,7 +62,7 @@ class _SocialMediaState extends State<SocialMedia> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(30, 70, 30, 20),
                     child: TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         prefixIcon: Icon(Icons.facebook_outlined),
                         border: OutlineInputBorder(),
                         labelText: 'Facebook',
@@ -73,7 +73,7 @@ class _SocialMediaState extends State<SocialMedia> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(30, 10, 30, 20),
                     child: TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         prefixIcon: Icon(Icons.camera_alt_outlined),
                         border: OutlineInputBorder(),
                         labelText: 'Instagram',
@@ -84,7 +84,7 @@ class _SocialMediaState extends State<SocialMedia> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(30, 10, 30, 20),
                     child: TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         prefixIcon: Icon(Icons.link_outlined),
                         border: OutlineInputBorder(),
                         labelText: 'linkedIn',

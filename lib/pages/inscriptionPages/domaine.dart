@@ -1,4 +1,5 @@
 import 'package:valleyproject/main.dart';
+import 'package:valleyproject/pages/inscriptionPages/ChooseService.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 
@@ -30,17 +31,17 @@ class _DomaineState extends State<Domaine> {
         ),
         body:SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.only(top: 80),
+              padding: const EdgeInsets.only(top: 60),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
 
-                    const Center(
-                      child: Text('Sélectionner votre domaine de spécialité!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                    Center(
+                      child: Text('Sélectionner votre domaine de spécialité!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                     ),
 
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(40, 70, 40, 0),
+                      padding: const EdgeInsets.fromLTRB(40, 60, 40, 0),
                       child: ElevatedButton(
                         child: Text("Designer", style: TextStyle(color:  Color(0xffFF2F2F2F))),
                         onPressed: (){
@@ -106,7 +107,7 @@ class _DomaineState extends State<Domaine> {
                     ),
 
                     Padding(
-                      padding: const EdgeInsets.only(top:150),
+                      padding: const EdgeInsets.only(top:100),
                       child: ElevatedButton(
                           child: Text("Continuer", style: TextStyle(fontSize: 18),),
                           style: ElevatedButton.styleFrom(
@@ -114,18 +115,20 @@ class _DomaineState extends State<Domaine> {
                             padding: EdgeInsets.fromLTRB(100, 15, 100, 15),
                           ),
                           onPressed: () {
-                            if(valueChoose!=''){
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => SocialMedia(nom: widget.nom, email: widget.email, password: widget.password, phone: widget.phone, date: widget.date, genre: widget.genre, univ: widget.univ, school: widget.school, branche: widget.branche, niveau: widget.niveau, etud_laureat: widget.etud_laureat,passions: widget.passions,counter: widget.counter, sdgs: widget.sdgs, sdgs_counter: widget.sdgs_counter,description: widget.description, file: widget.file, valueChoose: valueChoose)),
-                              );
-                            }
-                            else{
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(content: Text('Indiquer votre domaine !')),
-                              );
-                            }
-
+                            // if(valueChoose!=''){
+                            //   Navigator.push(
+                            //     context,
+                            //     // MaterialPageRoute(builder: (context) => SocialMedia(nom: widget.nom, email: widget.email, password: widget.password, phone: widget.phone, date: widget.date, genre: widget.genre, univ: widget.univ, school: widget.school, branche: widget.branche, niveau: widget.niveau, etud_laureat: widget.etud_laureat,passions: widget.passions,counter: widget.counter, sdgs: widget.sdgs, sdgs_counter: widget.sdgs_counter,description: widget.description, file: widget.file, valueChoose: valueChoose)),
+                            //
+                            //     //create accountr and redirect the user to this page to choose if he/she is a project holder or a skilled person
+                            //     MaterialPageRoute(builder: (context) => ChooseService()),
+                            //   );
+                            // }
+                            // else{
+                            //   ScaffoldMessenger.of(context).showSnackBar(
+                            //     const SnackBar(content: Text('Indiquer votre domaine !')),
+                            //   );
+                            // }
                           }
 
                       ),

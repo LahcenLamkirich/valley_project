@@ -17,12 +17,12 @@ class _CofounderAppState extends State<CofounderApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Co-founders Valley',
+      title: 'Co-founder Valley',
       theme: ThemeData(
           primarySwatch: Colors.deepPurple,
           fontFamily: 'InriaSans',
           visualDensity: VisualDensity.adaptivePlatformDensity),
-      initialRoute: '/chooseService',
+      initialRoute: '/home',
       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }

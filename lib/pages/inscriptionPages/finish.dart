@@ -38,7 +38,7 @@ class _FinishState extends State<Finish> {
               CircleAvatar(
               radius: 75.0,
               backgroundImage: widget.file == null
-                  ? AssetImage("assets/icon.jpg") as ImageProvider
+                  ? AssetImage("assets/icon1.jpg") as ImageProvider
                   : FileImage(File(widget.file!.path)) as ImageProvider,
               ),
               SizedBox(height: 20),
