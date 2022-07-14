@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 // This is the page that should be changed in the skill Person :
-
 class Share_project extends StatefulWidget {
   const Share_project({Key? key}) : super(key: key);
 
@@ -23,7 +22,7 @@ class _Share_projectState extends State<Share_project> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             // here will contain the infos of the user :
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -33,7 +32,7 @@ class _Share_projectState extends State<Share_project> {
                 Icon(Icons.exit_to_app_sharp)
               ],
             ),
-            SizedBox(height: 45,),
+            const SizedBox(height: 45,),
             Container(
               margin: const EdgeInsets.all(15),
               height: MediaQuery.of(context).size.height*0.07,
