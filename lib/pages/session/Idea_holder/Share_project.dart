@@ -2,8 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-
-// this is the page that should be changed in the skill Person :
+// This is the page that should be changed in the skill Person :
 
 class Share_project extends StatefulWidget {
   const Share_project({Key? key}) : super(key: key);
@@ -20,8 +19,91 @@ class _Share_projectState extends State<Share_project> {
   final List<String> domaines=[];
   @override
   Widget build(BuildContext context) {
-      return const Center(
-        child: Text("Hello our skills Person "),
+      return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            SizedBox(height: 20,),
+            // here will contain the infos of the user :
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text("Lahcen Lamkirich", style: TextStyle(fontSize: 18, color: Colors.black),),
+                SizedBox(width: 20,),
+                Icon(Icons.exit_to_app_sharp)
+              ],
+            ),
+            SizedBox(height: 45,),
+            Container(
+              margin: const EdgeInsets.all(15),
+              height: MediaQuery.of(context).size.height*0.07,
+              child: RaisedButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                    side: const BorderSide(color: Colors.white)),
+                onPressed: () {},
+                padding: const EdgeInsets.all(10.0),
+                color: Colors.white,
+                textColor: Colors.white,
+                child: const ListTile(
+                  leading: Text("Mon équipe"),
+                  trailing: Icon(Icons.arrow_forward_sharp),
+                )
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.all(15),
+              height: MediaQuery.of(context).size.height*0.07,
+              child: RaisedButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: const BorderSide(color: Colors.white)),
+                  onPressed: () {},
+                  padding: const EdgeInsets.all(10.0),
+                  color: Colors.white,
+                  textColor: Colors.white,
+                  child: const ListTile(
+                    leading: Text("Rejoindre une équipe "),
+                    trailing: Icon(Icons.arrow_forward_sharp),
+                  )
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.all(15),
+              height: MediaQuery.of(context).size.height*0.07,
+              child: RaisedButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: const BorderSide(color: Colors.white)),
+                  onPressed: () {},
+                  padding: const EdgeInsets.all(10.0),
+                  color: Colors.white,
+                  textColor: Colors.white,
+                  child: const ListTile(
+                    leading: Text("Notifications"),
+                    trailing: Icon(Icons.arrow_forward_sharp),
+                  )
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.all(15),
+              height: MediaQuery.of(context).size.height*0.07,
+              child: RaisedButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: const BorderSide(color: Colors.white)),
+                  onPressed: () {},
+                  padding: const EdgeInsets.all(10.0),
+                  color: Colors.white,
+                  textColor: Colors.white,
+                  child: const ListTile(
+                    leading: Text("Suivi des invitations envoyées"),
+                    trailing: Icon(Icons.arrow_forward_sharp),
+                  )
+              ),
+            ),
+          ],
+        )
       );
   }
 }

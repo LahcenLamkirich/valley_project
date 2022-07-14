@@ -22,7 +22,7 @@ class _CofounderAppState extends State<CofounderApp> {
           primarySwatch: Colors.deepPurple,
           fontFamily: 'InriaSans',
           visualDensity: VisualDensity.adaptivePlatformDensity),
-      initialRoute: '/home',
+      initialRoute: '/shareproject',
       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
