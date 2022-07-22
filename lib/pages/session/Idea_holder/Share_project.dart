@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:valleyproject/pages/session/SkilledPerson/monEquipe.dart';
 
 // This is the page that should be changed in the skill Person :
 class Share_project extends StatefulWidget {
@@ -40,7 +41,9 @@ class _Share_projectState extends State<Share_project> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                     side: const BorderSide(color: Colors.white)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const MyTeam()));
+                },
                 padding: const EdgeInsets.all(10.0),
                 color: Colors.white,
                 textColor: Colors.white,
